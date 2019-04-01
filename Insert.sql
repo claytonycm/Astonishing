@@ -19,7 +19,18 @@ INSERT Department VALUES
 (14, 'Dermatology');
 
 INSERT Room VALUES
-();
+(0, 6, 'General Medicine'),
+(1, 6, 'General Medicine'),
+(2, 6, 'General Medicine'),
+(3, 6, 'General Medicine'),
+(4, 6, 'General Medicine'),
+(5, 6, 'General Medicine'),
+(6, 6, 'General Medicine'),
+(7, 6, 'General Medicine'),
+(8, 6, 'General Medicine'),
+(9, 6, 'General Medicine'),
+(10, 6, 'General Medicine'),
+(11, 6, 'General Medicine');
 
 INSERT Disease VALUES
 ();
@@ -31,4 +42,4 @@ INSERT Nurse VALUES
 ();
 
 INSERT Doctor VALUES
-();
+();, 'General Medicine'
