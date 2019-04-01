@@ -19,8 +19,9 @@ CREATE TABLE Department
 CREATE TABLE Room
 	(Room_ID			INT,
 	 Room_VacantBed		INT,    # vacant number of beds in range [0, 6]
-	 Room_Dept			VARCHAR(50),
-     PRIMARY KEY(Room_ID)
+	 Room_Dept_ID		INT,
+     PRIMARY KEY(Room_ID),
+     FOREIGN KEY(Room_Dept_ID) REFERENCES Department(Dept_ID) ON DELETE SET NULL
 	);
  
  CREATE TABLE Disease
@@ -37,12 +38,12 @@ CREATE TABLE Room
 	);
     
 CREATE TABLE Nurse
-	(Nurs_ID		INT,  
+	(Nurs_ID		INT,
+	 Nurs_Name		VARCHAR(50),
+	 Nurs_Gender	VARCHAR(1),	# M/F  
 	 Nurs_Salary	INT,
      Nurs_Age		INT,
-	 Nurs_Name		VARCHAR(50),
-	 Nurs_Gender	VARCHAR(1),	# M/F
-     Nurs_Seniority	VARCHAR(20),
+     Nurs_Seniority	INT,
 	 PRIMARY KEY(Nurs_ID)
 	);
     
@@ -50,11 +51,12 @@ CREATE TABLE Doctor
 	(Doct_ID		INT, 
 	 Doct_Name		VARCHAR(50),
 	 Doct_Gender	VARCHAR(1),	# M/F  
-     Doct_Dept		VARCHAR(50),
+     Doct_Dept_ID	INT,
 	 Doct_Salary	INT,
      Doct_Age		INT,
-     Doct_Seniority	VARCHAR(20),
-	 PRIMARY KEY(Doct_ID)
+     Doct_Seniority	INT,
+	 PRIMARY KEY(Doct_ID),
+     FOREIGN KEY(Doct_Dept_ID) REFERENCES Department(Dept_ID) ON DELETE SET NULL
 	);
 
 CREATE TABLE Patient
