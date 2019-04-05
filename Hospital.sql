@@ -26,7 +26,7 @@ CREATE TABLE Room
  
  CREATE TABLE Disease
 	(Disc_Name			VARCHAR(50),
-     Disc_Description	VARCHAR(100),
+     Disc_Description	VARCHAR(150),
 	 PRIMARY KEY(Disc_Name)
 	);
     

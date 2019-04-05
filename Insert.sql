@@ -11,12 +11,7 @@ INSERT Department VALUES
 (6, 'Obestetrics & Gynecology'),
 (7, 'Reproductive Endocrinology & Infertility'),
 (8, 'Pediatrics'),
-(9, 'General Surgery'),
-(10, 'Orthopedics'),
-(11, 'Otolaryngology'),
-(12, 'Ophthalmology'),
-(13, 'Urology'),
-(14, 'Dermatology');
+(9, 'General Surgery');
 
 INSERT Room VALUES
 (0, 6, 0),
@@ -29,14 +24,27 @@ INSERT Room VALUES
 (7, 6, 7),
 (8, 6, 8),
 (9, 6, 9),
-(10, 6, 10),
-(11, 6, 11),
-(12, 6, 12),
-(13, 6, 13),
-(14, 6, 14);
+(10, 6, 1),
+(11, 6, 2),
+(12, 6, 3),
+(13, 6, 4),
+(14, 6, 5),
+(15, 6, 6),
+(16, 6, 7),
+(17, 6, 8),
+(18, 6, 9);
 
 INSERT Disease VALUES
-();
+('Dengue fever', 'A mosquito-borne tropical disease caused by the dengue virus'),
+('athlete\'s foot', 'A common skin infection of the feet caused by fungus'),
+('polio', 'An infectious disease caused by the poliovirus'),
+('stroke', 'A medical condition in which poor blood flow to the brain results in cell death'),
+('hypertension', 'A long-term medical condition in which the blood pressure in the arteries is persistently elevated'),
+('appendicitis', 'An inflammation of the appendix'),
+('cervical cancer', 'A cancer arising from the cervix'),
+('bronchitis', 'An inflammation of the bronchi (large and medium-sized airways) in the lungs'),
+('pneumonia', 'An inflammatory condition of the lung affecting primarily the small air sacs'),
+('schizophrenia', 'A mental disorder characterized by abnormal behavior, strange speech, and a decreased ability to understand reality');
 
 INSERT Medicine VALUES
 ();
@@ -67,12 +75,11 @@ INSERT Doctor VALUES
 (4, 'Doctor', 'M', 4, 20000, 39, 1),
 (5, 'Eason', 'M', 5, 25000, 28, 3),
 (6, 'Gary', 'M', 6, 30000, 36, 8),
--- 
-(7, 'Jenny', 'F', 7, 12000, 39, 12),
-(8, 'Mary', 'F', 8, 9000, 29, 4),
-(9, 'Netto', 'M', 9, 9500, 30, 7),
-(10, 'Olaf', 'M', 10, 10000, 32, 8),
-(11, 'Peter', 'M', 11, 12000, 41, 13),
-(12, 'Queen', 'F', 12, 9000, 28, 4),
-(13, 'Ruby', 'F', 13, 10000, 38, 9),
-(14, 'Sherry', 'F', 14, 9500, 29, 5);
+(7, 'Jane', 'F', 7, 30000, 39, 9),
+(8, 'Nifer', 'F', 8, 50000, 57, 24),
+(9, 'Oxford', 'M', 9, 37500, 44, 14),
+(10, 'Ouyang LiangWei', 'M', 0, 25000, 29, 2),
+(11, 'Pi', 'M', 1, 25000, 31, 4),
+(12, 'Ryan', 'M', 2, 20000, 29, 1),
+(13, 'Ruby', 'F', 3, 35000, 38, 11),
+(14, 'Terry', 'M', 4, 27500, 40, 6);
