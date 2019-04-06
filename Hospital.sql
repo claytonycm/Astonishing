@@ -33,7 +33,7 @@ CREATE TABLE Room
  CREATE TABLE Medicine
 	(Medi_Quantity		INT,
      Medi_Name		 	VARCHAR(50),
-     Medi_Description	VARCHAR(100),
+     Medi_Description	VARCHAR(150),
 	 PRIMARY KEY(Medi_Name)
 	);
     
