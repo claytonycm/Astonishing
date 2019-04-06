@@ -11,9 +11,9 @@ INSERT Department VALUES
 (5, 'General Surgery');
 
 INSERT Room VALUES
-(0, 6, 0),
+(0, 5, 0),
 (1, 6, 1),
-(2, 6, 2),
+(2, 5, 2),
 (3, 6, 3),
 (4, 6, 4),
 (5, 6, 5),
@@ -22,13 +22,7 @@ INSERT Room VALUES
 (8, 6, 2),
 (9, 6, 3),
 (10, 6, 4),
-(11, 6, 5),
-(12, 6, 0),
-(13, 6, 1),
-(14, 6, 2),
-(15, 6, 3),
-(16, 6, 4),
-(17, 6, 5);
+(11, 6, 5);
 
 INSERT Disease VALUES
 ('Dengue fever', 'A mosquito-borne tropical disease caused by the dengue virus'),
