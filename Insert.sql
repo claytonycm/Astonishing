@@ -1,7 +1,3 @@
-INSERT Patient VALUES
-('000', '000', '000', '000', 18, 'Lily', 'F', 'Denmark', 'Dengue fever', 'Anti-inflammatory', 'Y'),
-('000', '002', '001', '002', 55, 'Leslie', 'M', 'Denmark', 'Stroke', NULL, 'Y');
-
 INSERT Department VALUES
 ('000', 'General Medicine'),
 ('001', 'Family Medicine'),
@@ -65,9 +61,9 @@ INSERT Nurse VALUES
 ('015', 'Tina', 'F', 9000, 25, 1);
 
 INSERT Doctor VALUES
-('000', 'Alibaba', 'M', '000', 25000, 27, 4),
+('000', 'Alibaba', 'M', '005', 25000, 27, 4),
 ('001', 'Betty', 'F', '001', 35000, 35, 10),
-('002', 'Candy', 'F', '002', 27500, 33, 5),
+('002', 'Candy', 'F', '005', 27500, 33, 5),
 ('003', 'Charlie', 'M', '003', 35000, 39, 12),
 ('004', 'Doctor', 'M', '004', 20000, 39, 1),
 ('005', 'Eason', 'M', '005', 25000, 28, 3),
@@ -77,3 +73,7 @@ INSERT Doctor VALUES
 ('009', 'Oxford', 'M', '003', 37500, 44, 14),
 ('010', 'Ouyang LiangWei', 'M', '004', 25000, 29, 2),
 ('011', 'Ruby', 'F', '005', 25000, 31, 4);
+
+INSERT Patient VALUES
+('000', '000', '000', '000', 18, 'Lily', 'F', 'Denmark', 'Dengue fever', 'Anti-inflammatory', 'Y'),
+('001', '002', '001', '002', 55, 'Leslie', 'M', 'Denmark', 'Stroke', NULL, 'Y');

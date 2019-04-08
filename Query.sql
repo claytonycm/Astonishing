@@ -5,8 +5,6 @@
 # if neither works, enter:
 #    mysqld_safe --skip-grant-tables &
 
-# please include "Surgery" as one of Dept_Name
-
 USE Hospital;
 
 #list the name and salary for each doctor in decreasing order
@@ -16,10 +14,10 @@ SELECT Doct_Name, Doct_Salary FROM Doctor ORDER BY Doct_Salary DESC;
 SELECT Pati_Name, Pati_Urgent FROM Patient GROUP BY Pati_Urgent ORDER BY Pati_ID ASC;
 
 #list all the patients that each doctor in surgery department is responsible for
-SELECT Doct_Name, Pati_Name FROM Doctor NATURAL JOIN Patient WHERE Pati_DoctorID = Doct_ID AND Doct_Dept = "Surgery" GROUP BY Doct_Name;
+SELECT Doct_Name, Pati_Name FROM Doctor NATURAL JOIN Patient WHERE Pati_DoctorID = Doct_ID AND Doct_Dept_ID = "005" GROUP BY Doct_Name;
 
 #update all the doctors' salary in surgery department
-UPDATE Doctor SET Doct_Salary = Doct_Salary * 1.2  WHERE Doct_Dept = "Surgery";
+UPDATE Doctor SET Doct_Salary = Doct_Salary * 1.2  WHERE Doct_Dept_ID = "005";
 
 #delete the data of nurse with id 001
 DELETE FROM Nurse WHERE Nurs_ID = "001";
@@ -76,10 +74,10 @@ BEGIN
     UPDATE Doctor SET Doctor_Age = Doctor_Age + 1;
     UPDATE Nurse SET Nurs_Age = Nurs_Age + 1;
 END;
- 
+
+DELIMITER //
 SET GLOBAL EVENT_SCHEDULER = 1;
 DROP EVENT IF EXISTS UpdateAge;
-DELIMITER //
 CREATE EVENT UpdateAge ON SCHEDULE EVERY 1 YEAR
 STARTS '2019-01-01 00:00:01'
 DO CALL UpdateAgeForAllStaff;
