@@ -11,34 +11,34 @@ DROP TABLE IF EXISTS Nurse;
 DROP TABLE IF EXISTS Doctor;
 
 CREATE TABLE Department
-	(Dept_ID		INT,
+	(Dept_ID		VARCHAR(3),
 	 Dept_Name		VARCHAR(50),
 	 PRIMARY KEY(Dept_ID)
 	);
     
 CREATE TABLE Room
-	(Room_ID			INT,
+	(Room_ID			VARCHAR(3),
 	 Room_VacantBed		INT,    # vacant number of beds in range [0, 6]
-	 Room_Dept_ID		INT,
+	 Room_Dept_ID		VARCHAR(3),
      PRIMARY KEY(Room_ID),
      FOREIGN KEY(Room_Dept_ID) REFERENCES Department(Dept_ID) ON DELETE SET NULL
 	);
  
  CREATE TABLE Disease
 	(Disc_Name			VARCHAR(50),
-     Disc_Description	VARCHAR(100),
+     Disc_Description	VARCHAR(150),
 	 PRIMARY KEY(Disc_Name)
 	);
     
  CREATE TABLE Medicine
 	(Medi_Quantity		INT,
      Medi_Name		 	VARCHAR(50),
-     Medi_Description	VARCHAR(100),
+     Medi_Description	VARCHAR(150),
 	 PRIMARY KEY(Medi_Name)
 	);
     
 CREATE TABLE Nurse
-	(Nurs_ID		INT,
+	(Nurs_ID		VARCHAR(3),
 	 Nurs_Name		VARCHAR(50),
 	 Nurs_Gender	VARCHAR(1),	# M/F  
 	 Nurs_Salary	INT,
@@ -48,10 +48,10 @@ CREATE TABLE Nurse
 	);
     
 CREATE TABLE Doctor
-	(Doct_ID		INT, 
+	(Doct_ID		VARCHAR(3),
 	 Doct_Name		VARCHAR(50),
 	 Doct_Gender	VARCHAR(1),	# M/F  
-     Doct_Dept_ID	INT,
+     Doct_Dept_ID	VARCHAR(3),
 	 Doct_Salary	INT,
      Doct_Age		INT,
      Doct_Seniority	INT,
@@ -60,10 +60,10 @@ CREATE TABLE Doctor
 	);
 
 CREATE TABLE Patient
-	(Pati_ID		INT,             
-	 Pati_RoomID	INT,
-	 Pati_NurseID	INT,
-	 Pati_DoctorID	INT,
+	(Pati_ID		VARCHAR(3),            
+	 Pati_RoomID	VARCHAR(3),
+	 Pati_NurseID	VARCHAR(3),
+	 Pati_DoctorID	VARCHAR(3),
      Pati_Age		INT,
 	 Pati_Name		VARCHAR(50),
 	 Pati_Gender	VARCHAR(1),	# M/F
